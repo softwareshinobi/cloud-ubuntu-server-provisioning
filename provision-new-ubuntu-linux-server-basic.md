@@ -1,306 +1,247 @@
-# Run This Bash Script On Every New Linux Server You Create
+# Run This Provision Script On Every New Linux Server You Create
 
-## excerpt
+In this article you will create a server provisioning bash script that will update, upgrade and configure your new ubuntu linux server.
 
-In this article i walk you through a super simple bash script to modify your new linux server installation with a few key networking and docker software applications.
+![Run This Provision Script On Every New Linux Server You Create](cover-image.png)
 
-## Introduction
+So you've just created a new ubuntu linux server.
 
-You've just created a new ubuntu linux server in the cloud.
+Naturally you ask the following question: "I've got a new ubuntu linux server, now what?"
 
-Now what?
+First things first, let's do some simple OS configuration and install some stuff.
 
-In this article i walk you through a super simple bash script to modify your new linux server installation with a few key networking and docker software applications.
+In this article you will create a server provisioning bash script that will update, upgrade and configure your new ubuntu linux server.
 
 ## What This Ubuntu Server Provision Script Will Do
 
-This simple bash script will provision your new linux server with some basic software and capabilities.
+This simple bash script will configure your new linux server with some basic software and capabilities.
 
 * Update your operating system packages
 * Upgrade your operating system software and applications
-* Install the Vim text editor over Vi
 * Install basic networking software tools
-* Install docker compose to run containers
+* Install docker & docker compose to run containers
 
 ## Creating The Ubuntu Server Provision Script On Disk
 
 The first thing to do is create a new file with a `.sh` extension.
 
-The provision script will be a file called `system-resource-monitor-bash.sh`.
+The provision script will be a file called `provision-new-ubuntu-linux-server-basic.sh`.
 
-Use the following command to create the provisin script file.
+Use the following command to create the provision script file.
 
 ```bash
-touch system-resource-monitor-bash.sh 
+touch provision-new-ubuntu-linux-server-basic.sh 
 ```
 
 ## Going Into Detail Of The Simple Ubuntu Linux Provision Script
 
 In the following sections I will detail the key sections of this basic linux server provision script so that you can understand what is happening and why in the script.
 
-And don't worry, at the end of the document i will share a link to my github with the complete and ready to run provision script.
+And don't worry, at the end of the document i will share a link to my GitHub with the complete and ready to run provision script.
 
-## Add This Line To The Top Of The Provision Script
+## Configure The Provision Script To Use The Bash Shell
 
 Once you've created the script with the `touch` command, open it with your favorite text editor.
 
-The following line is added to the top of the provision script to tell the operating system to run this script with the `/bin/bash` executable.
+Add the following line to the top of the provision script.
+
+This line executes the script using the Bash shell.
 
 ```bash
 #!/bin/bash
 ```
 
+## Configure The Script To Stop On Failure
 
+Sometimes things go wrong with scripts and automation and for any number of reasons.
 
+So when an error happens, we want all script execution activities to stop.
 
+It's best to stop the script instead of continuing further execution in the event something failed.
 
+We instruct the script to do this by setting a configuration flag using the `set` command.
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-##
-## This is a simple bash script to install basic server for a modern docker-first linux server
-##
-## This scripts updates the system and installs networking tools, docker compose and vim
-##
-
-##
-
+```bash
 set -e
+```
 
-set -x 
+## Reset The Terminal Screen
 
-##
+Completely optional, but i like to clear the screen before my scripts execute.
 
-reset
+I prefer a pristine and empty screen to read from as the script executes.
 
-clear
+It's an OCD thing.
 
-##
+Don't be like me, but this is how you do it:
 
+```bash
+reset;clear;
+```
+
+## Print A Message To Standard Out That The Process Has Started
+
+So here we just let the user know that the script is starting. Nothing fancy.
+
+```bash
 echo
 echo "## "
 echo "## routine: [provision-new-ubuntu-linux-server-basic] // state: [starting]"
 echo "## "
 echo
+```
 
-##
+## Update the Operating System Packages
 
+We are going to upgrade the OS and install software. 
+
+Before we do that we are going update to update the software repository from  the official Ubuntu aptitude repositories.
+
+To do that, we’ll run the following command:
+
+```bash
 apt-get update
+```
 
-##
+## Upgrade Existing Software And Operating System
 
+So we've updated the packages from Aptitude.
+
+Now let's do the all the upgrades. There are two of them.
+
+One for the software on the system. Another for the system itself.
+
+```bash
 apt-get upgrade -y
 
 apt-get dist-upgrade -y
+```
 
-##
+## Installing Networking Monitoring Tools
 
-apt-get install -y ufw
+It won't be long before you need to monitor the networking situation on your linux server.
 
+The `net-tools` package gives us applications like `netstat` to poll ports and connections.
+
+Better to install it now, than in the heat of the moment of server troubleshooting.
+
+```bash
 apt-get install -y net-tools
+```
 
-##
+## Installing Docker And Docker Compose
 
+It is my belief that the modern linux server must support Docker.
+
+The landscape has shifted towards Docker and I think this Docker trend will continue.
+
+So let's install `docker` and `docker-compose` together.
+
+```bash
 apt-get install -y docker-compose
+```
 
-##
-
-apt-get install -y vim
+The `docker-compose` installation will install the most correct version of `docker` for you behind the scenes.
 
 ## Print A Message To Standard Out That The Process Has Completed
 
-So here we just let the user know that the script is done. Nothing fancy.
+So here we just let the user know that the script is done. Again, nothing fancy.
 
-```
+```bash
 echo
 echo "## "
 echo "## routine: [provision-new-ubuntu-linux-server-basic] // state: [completed]"
 echo "## "
 echo
 ```
-## The Complete System Monitor Script
 
-Here's what the complete end result of the bash script will look like:
-
-```bash
-
-#!/bin/bash
-
-##
-## BASH script to monitor system information
-##
-## This bash script performs to following checks:
-##
-##     * Memory Usage
-##     * CPU Load
-##
-##     * TCP Connections
-##     * Kernel Version
-##
-
-local_hostname=$(hostname)
-
-function monitor_system_memory_usage() {
-    
-    echo
-    echo "##"
-	echo "## Memory Usage // ${local_hostname}: "
-    echo "##"
-    echo
-    
-	free -h
-
-	echo
-	
-}
-
-
-function monitor_system_information() {
-        
-    echo
-    echo "##"
-	echo "## CPU Load // ${local_hostname}: "
-    echo "##"
-    echo
-    
-	uptime
-
-	echo
-
-}
-
-function monitor_tcp_connections() {
-
-    echo
-    echo "##"
-	echo "## TCP Connections // ${local_hostname}: "
-    echo "##"
-    echo
-    
-	cat  /proc/net/tcp | wc -l
-
-	echo
-
-}
-
-function monitor_kernel_information() {
-
-    echo
-    echo "##"
-	echo "## Kernel Version // ${local_hostname}: "
-    echo "##"
-    echo
-    
-	uname -r
-
-	echo
-
-}
-
-function execute_all_system_monitoring() {
-	
-	monitor_system_memory_usage
-	
-	monitor_system_information
-	
-	monitor_tcp_connections
-	
-	monitor_kernel_information
-	
-}
-
-execute_all_system_monitoring
-
-```
-
-## Make The Bash Script Executable
+## Make The Provision Script Executable
 
 Save the file and exit.
 
 After that make the script executable by running the following command:
 
 ```bash
-chmod +x system-resource-monitor-bash.sh
+chmod +x provision-new-ubuntu-linux-server-basic.sh
 ```
 
 ## Verify Permissions Of Your Bash File
 
 We'll need to verify the permissions on the bash file before we run it.
 
-To do that, we simply run the 'ls -l' command:
+To do that, we simply run the `ls -l` command:
 
 ```bash
-ls -lha system-resource-monitor-bash.sh 
+ls -l provision-new-ubuntu-linux-server-basic.sh 
 ```
 
 You want to see something similar to the following:
 
 ```bash
--rwxrwxr-x 1 software-shinobi software-shinobi 1,1K jun 24 10:47 system-resource-monitor-bash.sh
+-rwxrwxr-x 1 software-shinobi software-shinobi 679 ago 16 11:17 provision-new-ubuntu-linux-server-basic.sh
 ```
 
-You are looking for there to be three "x" in the beginning part that looks like this:
+You are looking for (3) three "x" in the beginning part that looks like this:
 
 ```bash
 -rwxrwxr-x
 ```
 
-## Executing The Bash File
+## Executing The Provision Script File
 
-So we've created the bash script and we've set the proper permissions.
+So we've created and updated the provision script. We've set the proper permissions on the provision script as well.
 
-Now let's run the bash script.
+Now, let's kick off the provision script and the installation processes.
 
-```bash
-./system-resource-monitor-bash.sh
-```
-
-Or you can alternately use this:
+Run the following command to execute the provision script on your new ubuntu linux server.
 
 ```bash
-bash system-resource-monitor-bash.sh
+sudo bash provision-new-ubuntu-linux-server-basic.sh
 ```
 
-Or this:
+We run the script as `sudo` because the commands requires require elevated access to modify the operating system files.
+
+## Did You Run The Script Correctly?
+
+Let's check your work. 
+
+After you execute the provision script, verify your terminal window looks like mine:
 
 ```bash
-source system-resource-monitor-bash.sh
+
+## 
+## routine: [provision-new-ubuntu-linux-server-basic] // state: [starting]
+## 
+
+Hit:1 http://co.archive.ubuntu.com/ubuntu jammy InRelease
+Hit:2 http://co.archive.ubuntu.com/ubuntu jammy-updates InRelease
+Hit:3 http://co.archive.ubuntu.com/ubuntu jammy-backports InRelease            
+Hit:4 http://security.ubuntu.com/ubuntu jammy-security InRelease               
+Hit:5 https://dl.google.com/linux/chrome/deb stable InRelease        
+Reading package lists... Done
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+Calculating upgrade... Done
+...
 ```
 
-Or this:
+## Get The Complete Provision Script From GitHub
 
-```bash
-. system-resource-monitor-bash.sh
-```
+I've made it easy to try out the provision script yourself.
 
-There are lots of ways to kick off a bash script on a linux server.
+If you don't feel like all the copy and paste work, then just clone my GitHub repo instead.
 
-## Get The Full Linux Server Provision Script Code On GitHub
+The GitHub repo got everything that you need to upgrade and execute the provision script.
 
-Mauris sit amet tempus purus, sit amet condimentum dolor. Nunc pellentesque vestibulum turpis, in semper ex finibus vel. 
-
-<<link to github page>>
+[https://github.com/software-shinobi/provision-new-ubuntu-linux-server-basic-bash](https://github.com/software-shinobi/provision-new-ubuntu-linux-server-basic-bash)
 
 ## Conclusion
 
-Server provision scripts are great for automating tasks and activites on linux servers.
+Server provisioning scripts are great for automating installations and activities on linux servers.
 
-Today we created a simple provision script to upgrade the base ubuntu linux operating system and install basic networking and containerization software on your linux server.
+Today we created a simple provision script to upgrade the base operating system and install basic networking and containerization software on your ubuntu linux server.
 
-Update the provision script code with your favorite software and customizations and push it all to your GitHub.
+Should you be inclined, update the basic provision script code with your favorite software and customizations and push it all to your GitHub.
 
-The next time that you create a new linux server, run the provision script and watch your computer update and upgrade itself!
+The next time you create a new linux server, clone the repo, run the provision script and watch your computer update and upgrade itself to your liking!
