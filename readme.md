@@ -1,78 +1,35 @@
-# Project Summary
-## Run This Provision Script On Every New Linux Server You Create
+# You Just Created A New Ubuntu Linux Server, Now What!?
 
-In this article you will create a server provision script that will update, upgrade and configure your new ubuntu linux server.
+In this GitHub repo will find a server provisioning bash script that will update, upgrade and configure your new ubuntu linux server.
 
-![Run This Provision Script On Every New Linux Server You Create](cover-image.png)
+![Run This Provision Script On Every New Linux Server You Create](project-documentation/cover-image.png)
 
-**Customer:** [insert]
+## About This Repository
 
-**Project name:** [insert]
+So you've just created a new ubuntu linux server.
 
-**Project goal:** Define the high level goal of the project.
+Naturally you ask the following question: "I've got a new ubuntu linux server, now what?"
 
-## Objectives:
+First things first, let's do some simple OS configuration and install some stuff.
 
-- Break out the project goal into more specific objectives
-- [insert]
-- [insert]
+In this GitHub repo will find a server provisioning bash script that will update, upgrade and configure your new ubuntu linux server.
 
-## Constraints:
+## More Things To Do In An Idealized Future
 
-- Define contraints like budget, time, abilities, regulations, etc.
-- [insert]
-- [insert]
-- [insert]
-- [insert]
-- [insert]
+- [ ] Run the script into a Docker image for funsies.
+- [ ] Create standard users w/ passwords w/ keys
+- [ ] Configure Docker user permissions at install
 
-## Risks:
+## Quick Start: Ubuntu Linux New Server Provision Script
 
-- Equipment delays [**SIGNIFICANT RISK**]
-- Over budget [MODEST RISK]
-- Use ‘Significant’ or ‘Modest’ as risk levels and bold Significant risks.
+Want to try and execute the provision script yourself?
 
-## Assumptions:
+Great, i'm thrilled.
 
-- List of assumtions outside the scope of the project.
-- Example: Contractor will provide tools and materials
-- [insert]
+Clone this repo and run the following command:
 
-## Project Scope
+```bash
+sudo bash source-code/provision-new-ubuntu-linux-server-basic.sh 
+```
 
-## In Scope:
-
-- Define actions within the scope of the project.
-- [insert]
-- [insert]
-
-## Out of Scope:
-
-- Define actions outside the scope of the project.
-- [insert]
-- [insert]
-
-## Deliverables:
-
-- Define specific completed deliverables by the end of the project.
-- [insert]
-- [insert]
-
-## Tasks and Estimated Costs
-
-| Task | Estimated Costs | Notes |
-|------|-----------------|-------|
-|ex. Furniture|$1,000| |
-|Decorations|$250|*wall art*|
-|**TOTAL**|**$1,250**|*estimated*|
-
-
-## Closing Checklist
-
-- [ ]  All Deliverables Checked and Tested for Quality Requirements
-- [ ]  Deliver Documentation and/or Training (*If Required*)
-- [ ]  Get Customer/Management/Stakeholder Sign-Off
-- [ ]  Reassign Personnel, Dispose of Surplus Equipment/Materials, and Release Facilities
-- [ ]  Document Project (*Problems, Lessons Learned, Etc.*)
-- [ ]  Report Final Project Status and Outcome to Customer/Management/Stakeholders
-- [ ]  Declare Project Completed
+## Namaste.
