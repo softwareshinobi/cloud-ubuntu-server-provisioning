@@ -20,6 +20,16 @@ In this GitHub repo will find a server provisioning bash script that will update
 - [ ] Create standard users w/ passwords w/ keys
 - [ ] Configure Docker user permissions at install
 
+## Read The Companion Article
+
+I put together an article that goes into more detail about this provision script.
+
+So go read that article. Or don't, that's ok too.
+
+Somewhere in there is RTFM humor.
+
+[Read the provision script companion article](project-documentation/you-just-created-a-new-ubuntu-linux-server-now-what.md)
+
 ## Quick Start: Ubuntu Linux New Server Provision Script
 
 Want to try and execute the provision script yourself?
