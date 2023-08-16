@@ -32,7 +32,7 @@ Somewhere in there is RTFM humor.
 
 ## Quick Start: Ubuntu Linux New Server Provision Script
 
-Want to try and execute the provision script yourself?
+Want to try and execute the ubuntu linux server provision script yourself?
 
 Great, i'm thrilled.
 
