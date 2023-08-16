@@ -234,7 +234,7 @@ If you don't feel like all the copy and paste work, then just clone my GitHub re
 
 The GitHub repo got everything that you need to upgrade and execute the provision script.
 
-[https://github.com/software-shinobi/provision-new-ubuntu-linux-server-basic-bash](https://github.com/software-shinobi/provision-new-ubuntu-linux-server-basic-bash)
+[https://github.com/software-shinobi/you-just-created-a-new-ubuntu-linux-server-now-what](https://github.com/software-shinobi/you-just-created-a-new-ubuntu-linux-server-now-what)
 
 ## Conclusion
 
