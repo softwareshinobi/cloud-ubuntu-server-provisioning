@@ -1,8 +1,8 @@
-# Run This Provision Script On Every New Linux Server You Create
+# You Just Created A New Ubuntu Linux Server, Now What!?
 
 In this article you will create a server provisioning bash script that will update, upgrade and configure your new ubuntu linux server.
 
-![Run This Provision Script On Every New Linux Server You Create](cover-image.png)
+![You Just Created A New Ubuntu Linux Server, Now What!?](cover-image.png)
 
 So you've just created a new ubuntu linux server.
 
