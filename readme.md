@@ -20,11 +20,11 @@ in this repo is a server provisioning script that updates, upgrades, and configu
 
 ## future upgrades to script
 
-- [in software shinobi linux] Run the script into a Docker image for funsies.
-- [in stark industries scripts] Create standard users w/ passwords w/ keys
-- [in stark industries scripts] Configure Docker user permissions at install
-- [in software developer things] add in the custom bashrc configuration for speed
-- [in software developer things] add in the custom bashrc configuration for speed
+- [software shinobi linux] Run the script into a Docker image for funsies.
+- [stark industries scripts] Create standard users w/ passwords w/ keys
+- [stark industries scripts] Configure Docker user permissions at install
+- [software developer things] add in the custom bashrc configuration for speed
+- [software developer things] add in the custom bashrc configuration for speed
 
 ## read The companion article
 
@@ -34,7 +34,7 @@ so go read that article. or don't, that's ok too.
 
 somewhere in there is rtfm humor.
 
-[Read the provision script companion article](docs/article.md)
+[read companion article](docs/article.md)
 
 ## quick start: Ubuntu Server Provision Script
 
@@ -54,7 +54,7 @@ that's enough readme swag for now.
 
 without any more delay, go look at the simple basic-ass script.
 
-[the provision script](provision.bash)
+[see provision script](provision.bash)
 
 knock yourself out and have fun.
 
