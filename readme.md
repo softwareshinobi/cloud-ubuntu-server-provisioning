@@ -1,6 +1,6 @@
 # You Just Created A New Ubuntu Linux Server, Now What!?
 
-in this repo will find a server provisioning script that will update, upgrade and configure your new ubuntu linux server.
+in this repo you'll find a server provisioning script that updates, upgrades, and configures an ubuntu linux server.
 
 ![Run This Provision Script On Every New Linux Server You Create](docs/imagery/cover.png)
 
@@ -16,7 +16,7 @@ I've got a new ubuntu linux server, now what?
 
 so we'll first do simple OS configuration and install some stuff.
 
-in this repo will find a server provisioning script that will update, upgrade and configure your new ubuntu linux server.
+in this repo is a server provisioning script that updates, upgrades, and configures an ubuntu linux server.
 
 ## future upgrades to script
 
