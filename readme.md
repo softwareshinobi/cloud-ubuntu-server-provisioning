@@ -46,4 +46,15 @@ clone this repo and run the following command:
 sudo bash provision.bash 
 ```
 
+## view the script
+
+that's enough readme swag.
+
+without any more delay, go look at the simple basic-ass script.
+
+[the provision script](provision.bash)
+
+knock yourself out and have fun.
+
+
 ## namaste.
