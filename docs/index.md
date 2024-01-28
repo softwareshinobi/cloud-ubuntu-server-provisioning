@@ -210,7 +210,7 @@ After you execute the provision script, verify your terminal window looks like m
 ```bash
 
 ## 
-## routine: [provision-new-ubuntu-linux-server-basic] // state: [starting]
+## routine / provision-ubuntu-basic / starting
 ## 
 
 Hit:1 http://co.archive.ubuntu.com/ubuntu jammy InRelease
@@ -224,17 +224,8 @@ Building dependency tree... Done
 Reading state information... Done
 Calculating upgrade... Done
 ...
+
 ```
-
-## Get The Complete Provision Script From GitHub
-
-I've made it easy to try out the provision script yourself.
-
-If you don't feel like all the copy and paste work, then just clone my GitHub repo instead.
-
-The GitHub repo got everything that you need to upgrade and execute the provision script.
-
-[https://github.com/software-shinobi/you-just-created-a-new-ubuntu-linux-server-now-what](https://github.com/software-shinobi/you-just-created-a-new-ubuntu-linux-server-now-what)
 
 ## Conclusion
 
