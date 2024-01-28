@@ -20,7 +20,7 @@ clear
 
 echo
 echo "## "
-echo "## / routine / [provision-ubuntu-basic] / [starting] /"
+echo "## routine / provision-ubuntu-basic / starting"
 echo "## "
 echo
 
@@ -48,6 +48,6 @@ apt-get install -y docker-compose
 
 echo
 echo "## "
-echo "## / routine / [provision-ubuntu-basic] / [completed] /"
+echo "## routine / provision-ubuntu-basic / completed"
 echo "## "
 echo

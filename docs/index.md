@@ -4,8 +4,6 @@ In this article you will create a server provisioning bash script that will upda
 
 ![You Just Created A New Ubuntu Linux Server, Now What!?](imagery/cover.png)
 
-![You Just Created A New Ubuntu Linux Server, Now What!?](/imagery/cover.png)
-
 So you've just created a new ubuntu linux server.
 
 Naturally you ask the following question: "I've got a new ubuntu linux server, now what?"
@@ -27,12 +25,12 @@ This simple bash script will configure your new linux server with some basic sof
 
 The first thing to do is create a new file with a `.sh` extension.
 
-The provision script will be a file called `provision-new-ubuntu-linux-server-basic.sh`.
+The provision script will be a file called `provision.bash`.
 
 Use the following command to create the provision script file.
 
 ```bash
-touch provision-new-ubuntu-linux-server-basic.sh 
+touch provision.bash 
 ```
 
 ## Going Into Detail Of The Simple Ubuntu Linux Provision Script
@@ -88,7 +86,7 @@ So here we just let the user know that the script is starting. Nothing fancy.
 ```bash
 echo
 echo "## "
-echo "## routine: [provision-new-ubuntu-linux-server-basic] // state: [starting]"
+echo "## routine / provision-ubuntu-basic / starting"
 echo "## "
 echo
 ```
@@ -152,7 +150,7 @@ So here we just let the user know that the script is done. Again, nothing fancy.
 ```bash
 echo
 echo "## "
-echo "## routine: [provision-new-ubuntu-linux-server-basic] // state: [completed]"
+echo "## routine / provision-ubuntu-basic / completed"
 echo "## "
 echo
 ```
@@ -164,7 +162,7 @@ Save the file and exit.
 After that make the script executable by running the following command:
 
 ```bash
-chmod +x provision-new-ubuntu-linux-server-basic.sh
+chmod +x provision.bash
 ```
 
 ## Verify Permissions Of Your Bash File
@@ -174,13 +172,13 @@ We'll need to verify the permissions on the bash file before we run it.
 To do that, we simply run the `ls -l` command:
 
 ```bash
-ls -l provision-new-ubuntu-linux-server-basic.sh 
+ls -l provision.bash 
 ```
 
 You want to see something similar to the following:
 
 ```bash
--rwxrwxr-x 1 software-shinobi software-shinobi 679 ago 16 11:17 provision-new-ubuntu-linux-server-basic.sh
+-rwxrwxr-x 1 software-shinobi software-shinobi 679 ago 16 11:17 provision.bash
 ```
 
 You are looking for (3) three "x" in the beginning part that looks like this:
@@ -198,7 +196,7 @@ Now, let's kick off the provision script and the installation processes.
 Run the following command to execute the provision script on your new ubuntu linux server.
 
 ```bash
-sudo bash provision-new-ubuntu-linux-server-basic.sh
+sudo bash provision.bash
 ```
 
 We run the script as `sudo` because the commands requires require elevated access to modify the operating system files.
