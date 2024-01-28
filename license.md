@@ -12,6 +12,6 @@ with love,
 
 software shinobi
 
-[https://softwareshinobi.digital](https://softwareshobi.digital)
+[https://softwareshinobi.digital](https://softwareshinobi.digital)
 
-## Namaste.
+## namaste.
