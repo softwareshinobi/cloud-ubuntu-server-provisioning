@@ -2,7 +2,9 @@
 
 In this article you will create a server provisioning bash script that will update, upgrade and configure your new ubuntu linux server.
 
-![You Just Created A New Ubuntu Linux Server, Now What!?](cover.png)
+![You Just Created A New Ubuntu Linux Server, Now What!?](imagery/cover.png)
+
+![You Just Created A New Ubuntu Linux Server, Now What!?](/imagery/cover.png)
 
 So you've just created a new ubuntu linux server.
 
