@@ -26,7 +26,7 @@ in this repo is a server provisioning script that updates, upgrades, and configu
 - [software developer things] add in the custom bashrc configuration for speed
 - [software developer things] add in the custom bashrc configuration for speed
 
-## read The companion article
+## read the companion article
 
 i put together an article that goes into more detail about this provision script.
 
@@ -36,7 +36,7 @@ somewhere in there is rtfm humor.
 
 [read companion article](docs/article.md)
 
-## quick start: Ubuntu Server Provision Script
+## quick start
 
 want to try and execute the ubuntu linux server provision script yourself?
 
@@ -48,6 +48,8 @@ clone this repo and run the following command:
 sudo bash provision.bash 
 ```
 
+`note` you can run this script as the `root` user or a user in the `sudo` group.
+
 ## view the script
 
 that's enough readme swag for now.
@@ -57,6 +59,5 @@ without any more delay, go look at the simple basic-ass script.
 [see provision script](provision.bash)
 
 knock yourself out and have fun.
-
 
 ## namaste.
