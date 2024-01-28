@@ -1,10 +1,10 @@
 # You Just Created A New Ubuntu Linux Server, Now What!?
 
-In this GitHub repo will find a server provisioning bash script that will update, upgrade and configure your new ubuntu linux server.
+in this repo will find a server provisioning script that will update, upgrade and configure your new ubuntu linux server.
 
 ![Run This Provision Script On Every New Linux Server You Create](docs/imagery/cover.png)
 
-## About This Repository
+## about this repository
 
 So you've just created a new ubuntu linux server.
 
@@ -14,36 +14,36 @@ Naturally you ask the following question:
 I've got a new ubuntu linux server, now what?
 ```
 
-First things first, let's do some simple OS configuration and install some stuff.
+so we'll first do simple OS configuration and install some stuff.
 
-In this GitHub repo will find a server provisioning bash script that will update, upgrade and configure your new ubuntu linux server.
+in this repo will find a server provisioning script that will update, upgrade and configure your new ubuntu linux server.
 
-## More Things To Do In An Idealized Future
+## future upgrades to script
 
-- [ ] Run the script into a Docker image for funsies.
-- [ ] Create standard users w/ passwords w/ keys
-- [ ] Configure Docker user permissions at install
+- [in software shinobi linux] Run the script into a Docker image for funsies.
+- [in stark industries scripts] Create standard users w/ passwords w/ keys
+- [in stark industries scripts] Configure Docker user permissions at install
 
-## Read The Companion Article
+## read The companion article
 
-I put together an article that goes into more detail about this provision script.
+i put together an article that goes into more detail about this provision script.
 
-So go read that article. Or don't, that's ok too.
+so go read that article. or don't, that's ok too.
 
-Somewhere in there is RTFM humor.
+somewhere in there is rtfm humor.
 
-[Read the provision script companion article](project-documentation/you-just-created-a-new-ubuntu-linux-server-now-what.md)
+[Read the provision script companion article](docs/you-just-created-a-new-ubuntu-linux-server-now-what.md)
 
-## Quick Start: Ubuntu Linux New Server Provision Script
+## quick start: Ubuntu Server Provision Script
 
-Want to try and execute the ubuntu linux server provision script yourself?
+want to try and execute the ubuntu linux server provision script yourself?
 
-Great. and i'm thrilled.
+great and i'm thrilled.
 
-Clone this repo and run the following command:
+clone this repo and run the following command:
 
 ```bash
-sudo bash source-code/provision-new-ubuntu-linux-server-basic.sh 
+sudo bash provision.bash 
 ```
 
-## Namaste.
+## namaste.
