@@ -10,12 +10,12 @@ The contents of this repository have been created to fulfill a singular Intentio
 
 ## The Intention Behind It All
 
-It is my Intention that the fruits of my software development labor will be shared with and consumed by the Universe forever and forever.
-
-## Namaste.
+it is my Intention that the fruits of my software development labor will be shared with and consumed by the Universe forever and forever.
 
 --
 
 With Lots Of Love,
 
 Software Shinobi
+
+## namaste.

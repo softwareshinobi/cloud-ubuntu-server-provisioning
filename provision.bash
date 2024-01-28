@@ -1,16 +1,16 @@
 #!/bin/bash
 
 ##
-## This is a simple bash script to install basic server for a modern docker-first linux server
+## this is a simple bash script to install basic server config
 ##
-## This scripts updates the system and installs networking tools, docker compose and vim
+##     OS target: docker-first debian-based linux
+##
+##     Overview: update and upgrade the system, install troubleshooting tools, vim, and docker compose
 ##
 
 ##
 
 set -e
-
-##
 
 reset
 
@@ -20,7 +20,7 @@ clear
 
 echo
 echo "## "
-echo "## routine: [provision-new-ubuntu-linux-server-basic] // state: [starting]"
+echo "## / routine / [provision-ubuntu-basic] / [starting] /"
 echo "## "
 echo
 
@@ -38,6 +38,8 @@ apt-get dist-upgrade -y
 
 apt-get install -y net-tools
 
+apt-get install -y vim
+
 ##
 
 apt-get install -y docker-compose
@@ -46,6 +48,6 @@ apt-get install -y docker-compose
 
 echo
 echo "## "
-echo "## routine: [provision-new-ubuntu-linux-server-basic] // state: [starting]"
+echo "## / routine / [provision-ubuntu-basic] / [completed] /"
 echo "## "
 echo

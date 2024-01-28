@@ -2,13 +2,17 @@
 
 In this GitHub repo will find a server provisioning bash script that will update, upgrade and configure your new ubuntu linux server.
 
-![Run This Provision Script On Every New Linux Server You Create](project-documentation/cover-image.png)
+![Run This Provision Script On Every New Linux Server You Create](docs/imagery/cover.png)
 
 ## About This Repository
 
 So you've just created a new ubuntu linux server.
 
-Naturally you ask the following question: "I've got a new ubuntu linux server, now what?"
+Naturally you ask the following question:
+
+```quote
+I've got a new ubuntu linux server, now what?
+```
 
 First things first, let's do some simple OS configuration and install some stuff.
 
@@ -34,7 +38,7 @@ Somewhere in there is RTFM humor.
 
 Want to try and execute the ubuntu linux server provision script yourself?
 
-Great, i'm thrilled.
+Great. and i'm thrilled.
 
 Clone this repo and run the following command:
 
