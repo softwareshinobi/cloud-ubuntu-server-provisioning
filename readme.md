@@ -4,6 +4,19 @@ in this repo you'll find a server provisioning script that updates, upgrades, an
 
 ![Run This Provision Script On Every New Linux Server You Create](docs/imagery/cover.png)
 
+
+## COMING SOON
+
+update and upgrade 
+
+uninstall docker
+
+install docker
+
+reconfigure docker port
+
+install bashrc to entire server
+
 ## about this repository
 
 So you've just created a new ubuntu linux server.
